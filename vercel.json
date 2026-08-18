@@ -1,0 +1,26 @@
+{
+  "functions": {
+    "api/weather.js": {
+      "runtime": "node18"
+    }
+  },
+  "build": {
+    "command": "echo 'No build step needed'",
+    "publish": "."
+  },
+  "env": {
+    "SUPABASE_URL": "https://tgyhtbbvcwgnjpmwrhue.supabase.co",
+    "SUPABASE_ANON_KEY": "sb_publishable_AYX_wAipVjgeZKepF80Jqg_Rvijd06F"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

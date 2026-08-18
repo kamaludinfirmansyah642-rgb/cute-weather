@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Weather - Weather App</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-emoji">🌤️</div>
+    <div class="loading-text">Mencari cuaca...</div>
+  </div>
+
+  <!-- Floating Clouds Background -->
+  <div class="cloud-bg" id="cloudBg"></div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1><span class="weather-icon">🌤️</span> Cute Weather</h1>
+      <p class="subtitle" id="greeting">Ada apa dengan cuaca hari ini?</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Location Section -->
+      <section class="location-section" id="locationSection">
+        <div class="location-card">
+          <div class="location-input">
+            <input type="text" id="locationInput" placeholder="Cari kota atau lokasi...">
+            <button class="btn-search" id="searchBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="location-permission">
+            <button class="btn-location" id="locationBtn" disabled>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="12" x2="16" y2="16"></line>
+                <line x1="12" y1="16" x2="20" y2="12"></line>
+                <line x1="12" y1="12" x2="12.01" y2="12"></line>
+              </svg>
+              Dapatkan Lokasi Saya
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weather Display -->
+      <section class="weather-display" id="weatherSection" style="display: none;">
+        <div class="weather-card">
+          <div class="weather-header">
+            <h2 class="city-name" id="cityName"></h2>
+            <div class="weather-icon-large" id="weatherIcon"></div>
+            <span class="temperature" id="temperature"></span>
+          </div>
+          <div class="weather-details">
+            <div class="detail">
+              <div class="detail-label">Kelembaban</div>
+              <div class="detail-value" id="humidity">--%</div>
+            </div>
+            <div class="detail">
+              <div class="detail-label">Angin</div>
+              <div class="detail-value" id="wind">-- m/s</div>
+            </div>
+            <div class="detail">
+              <div class="detail-label">Deskripsi</div>
+              <div class="detail-value" id="description"></div>
+            </div>
+          </div>
+          <div class="weather-tips" id="weatherTips">
+            <span class="tip-icon">💡</span>
+            <span class="tip-text" id="tipText"></span>
+          </div>
+          <div class="weather-footer">
+            <div class="date" id="date"></div>
+            <small>Disimpan ke history lokasi</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Admin Section -->
+    <section class="admin-section" id="adminSection" style="display: none;">
+      <div class="admin-card">
+        <h2><span class="icon-admin">🔧</span> Admin Dashboard</h2>
+        <p>Lokasi yang tersimpan</p>
+        <div class="locations-list" id="locationsList">
+          <p class="empty-state">Belum ada lokasi yang disimpan</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Cute Animal Companion -->
+  <div class="animal-companion" id="animalCompanion">🐰</div>
+
+  <!-- Supabase Client Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
