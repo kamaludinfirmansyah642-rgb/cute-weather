@@ -1,8 +1,6 @@
 {
   "functions": {
-    "api/weather.js": {
-      "runtime": "@vercel/node@18.x"
-    }
+    "api/weather.js": {}
   },
   "env": {
     "SUPABASE_URL": "https://tgyhtbbvcwgnjpmwrhue.supabase.co",
