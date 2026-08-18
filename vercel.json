@@ -4,9 +4,6 @@
       "runtime": "node18"
     }
   },
-  "build": {
-    "publish": "."
-  },
   "env": {
     "SUPABASE_URL": "https://tgyhtbbvcwgnjpmwrhue.supabase.co",
     "SUPABASE_ANON_KEY": "sb_publishable_AYX_wAipVjgeZKepF80Jqg_Rvijd06F"
