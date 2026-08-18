@@ -1,20 +1,15 @@
 {
-  "functions": {
-    "api/weather.js": {}
+  "name": "cute-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "env": {
-    "SUPABASE_URL": "https://tgyhtbbvcwgnjpmwrhue.supabase.co",
-    "SUPABASE_ANON_KEY": "sb_publishable_AYX_wAipVjgeZKepF80Jqg_Rvijd06F"
-  },
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  }
 }
